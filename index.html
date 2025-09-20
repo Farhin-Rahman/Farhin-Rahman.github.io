@@ -8,11 +8,12 @@
     />
     <meta
       name="description"
-      content="Start your development with JohnDoe landing page."
+      content="Farhin Rahman — AI Engineer & Researcher. Agentic AI systems, RAG, Transformers, MLOps. Publications in healthcare AI and NLP."
     />
-    <meta name="author" content="Devcrud" />
-    <title>Farhin Rahman | Machine Learning Engineer</title>
-    <!-- font icons -->
+    <meta name="author" content="Farhin Rahman" />
+    <title>Farhin Rahman | AI Engineer</title>
+
+    <!-- Icons / Styles -->
     <link
       rel="stylesheet"
       href="assets/vendors/themify-icons/css/themify-icons.css"
@@ -22,39 +23,70 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Bootstrap 4 CSS from CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Your Custom Styles -->
+<link rel="stylesheet" href="assets/css/style.css">
+    <!-- Small helpers for equal-height cards & portfolio -->
+    <style>
+      /* Make portfolio cards equal height */
+      .portfolio-item .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .portfolio-item .card-body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .portfolio-item .card-body .subtitle {
+        margin-bottom: 1rem;
+      }
+      .portfolio-item .card-body .stack {
+        margin-top: auto; /* pushes stack section to bottom for equal feel */
+        font-size: 0.95rem;
+      }
+      /* Optional: cap text so rows stay neat (tweak to taste) */
+      .clamp-4 {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      /* Filter pills */
+      .portfolio-filters a {
+        cursor: pointer;
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid #eaeaea;
+        margin-right: 0.4rem;
+        margin-bottom: 0.6rem;
+        display: inline-block;
+      }
+      .portfolio-filters a.active,
+      .portfolio-filters a:hover {
+        background: #0b46a0;
+        color: #fff !important;
+        border-color: #0b46a0;
+        text-decoration: none;
+      }
+    </style>
   </head>
+
   <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <a
-      href="components.html"
-      class="btn btn-primary btn-component"
-      data-spy="affix"
-      data-offset-top="600"
-      ><i class="ti-shift-left-alt"></i> Components</a
-    >
+    <!-- Header -->
     <header class="header">
       <div class="container">
         <ul class="social-icons pt-3">
           <li class="social-item">
             <a
               class="social-link"
-              href="https://www.facebook.com/profile.php?id=100015068590839"
-              target="_blank"
-              ><i class="fa fa-facebook" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li class="social-item">
-            <a
-              class="social-link"
-              href="https://www.researchgate.net/profile/Farhin-Rahman-3"
-              target="_blank"
-              ><i class="fa-brands fa-researchgate" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li class="social-item">
-            <a
-              class="social-link"
               href="https://www.linkedin.com/in/farhin-rahman22011998/"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
               ><i class="fa fa-linkedin" aria-hidden="true"></i
             ></a>
           </li>
@@ -63,25 +95,49 @@
               class="social-link"
               href="https://github.com/Farhin-Rahman"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
               ><i class="fa fa-github" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link"
+              href="https://scholar.google.com/citations?user=MfRct4YAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
+              ><i class="fa fa-graduation-cap" aria-hidden="true"></i
             ></a>
           </li>
         </ul>
         <div class="header-content">
           <h4 class="header-subtitle">Hello, I am</h4>
           <h1 class="header-title">Farhin Rahman</h1>
-          <h6 class="header-mono">
-            Machine Learning Engineer | Software Developer
-          </h6>
-          <button class="btn btn-primary btn-rounded" id="printButton">
-            <i class="ti-printer pr-2"></i>Print Resume
-          </button>
+          <h6 class="header-mono">AI Engineer • Researcher</h6>
+          <div class="mt-3">
+            <a
+              href="assets/Farhin_Rahman_sCV.pdf"
+              class="btn btn-outline-light btn-rounded mr-2"
+              download
+              aria-label="Download CV"
+              ><i class="ti-download pr-2"></i>Download CV</a
+            >
+            <button
+              class="btn btn-primary btn-rounded"
+              id="printButton"
+              aria-label="Print Resume"
+            >
+              <i class="ti-printer pr-2"></i>Print Resume
+            </button>
+          </div>
         </div>
       </div>
     </header>
+
+    <!-- Navbar -->
     <nav
       class="navbar sticky-top navbar-expand-lg navbar-light bg-white"
-      data-spy="affix"
       data-offset-top="510"
     >
       <div class="container">
@@ -101,31 +157,26 @@
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
-            </li>
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
             <li class="nav-item">
               <a href="#resume" class="nav-link">Resume</a>
             </li>
           </ul>
           <ul class="navbar-nav brand">
-            <img src="assets/imgs/DP.jpg" alt="" class="brand-img" />
+            <img
+              src="assets/imgs/DP.jpg"
+              alt="Farhin Rahman photo"
+              class="brand-img"
+            />
             <li class="brand-txt">
               <h5 class="brand-title">Farhin Rahman</h5>
-              <div class="brand-subtitle">
-                Machine Learning Engineer | Software Developer
-              </div>
+              <div class="brand-subtitle">AI Engineer • Researcher</div>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a href="#portfolio" class="nav-link">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a href="#blog" class="nav-link">Blog</a>
             </li>
             <li class="nav-item last-item">
               <a href="#contact" class="nav-link">Contact</a>
@@ -134,35 +185,39 @@
         </div>
       </div>
     </nav>
+
+    <!-- About -->
     <div class="container-fluid">
       <div id="about" class="row about-section">
         <div class="col-lg-4 about-card">
           <h3 class="font-weight-light">About me</h3>
           <span class="line mb-5"></span>
-          <h5 class="mb-3">CS Graduate | Machine Learning Engineer</h5>
+          <h5 class="mb-3">AI Engineer • CS Graduate </h5>
           <p class="mt-20">
-            I'm a computer science graduate with strong software development
-            skills, including Java, Python, JavaScript, Groovy, PHP, SQL, PLSQL,
-            HTML, CSS, Bootstrap, and jQuery. I'm passionate about both
-            development and machine learning, especially NLP. Currently, I
-            specialize in front-end development using HTML, CSS, JavaScript,
-            React.js, Next.js. In my free time, I enjoy drawing and design,
-            which also improves my front-end skills.
+            AI researcher and engineer with publications in healthcare AI and
+            NLP. I design and build end-to-end intelligent systems—from agentic
+            workflows with LangGraph/LangChain and fine-tuned transformers to
+            robust data infrastructure with MLOps best practices.
           </p>
-          <a href="assets/Resume_Of_FarhinRahman_Updated.pdf" download>
-            <button class="btn btn-outline-danger">
+          <a href="assets/Farhin_Rahman_sCV" download aria-label="Download CV"
+            ><button class="btn btn-outline-danger">
               <i class="icon-down-circled2"></i>Download My CV
-            </button>
-          </a>
+            </button></a
+          >
         </div>
 
         <div class="col-lg-4 about-card">
           <h3 class="font-weight-light">Personal Info</h3>
           <span class="line mb-5"></span>
           <ul class="mt40 info list-unstyled">
-            <li><span>Occupation</span> : Machine Learning Engineer</li>
-            <li><span>Email</span> : farhinrahman1998@gmail.com</li>
-            <li><span>Phone</span> : + (880) 1751071851</li>
+            <li><span>Occupation</span> : AI Engineer</li>
+            <li>
+              <span>Email</span> :
+              <a href="mailto:sadiafarhin62@gmail.com"
+                >sadiafarhin62@gmail.com</a
+              >
+            </li>
+            <li><span>Phone</span> : +880 1751 071851</li>
             <li><span>University</span> : BRAC University</li>
             <li><span>Address</span> : South Banasree, Dhaka-1219</li>
           </ul>
@@ -170,16 +225,10 @@
             <li class="social-item">
               <a
                 class="social-link"
-                href="https://www.facebook.com/profile.php?id=100015068590839"
-                target="_blank"
-                ><i class="ti-facebook" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li class="social-item">
-              <a
-                class="social-link"
                 href="https://www.linkedin.com/in/farhin-rahman22011998/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 ><i class="ti-linkedin" aria-hidden="true"></i
               ></a>
             </li>
@@ -188,100 +237,183 @@
                 class="social-link"
                 href="https://github.com/Farhin-Rahman"
                 target="_blank"
-                ><i class="ti-github" aria-hidden="true"></i
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><i class="fa fa-github" aria-hidden="true"></i
               ></a>
             </li>
             <li class="social-item">
               <a
                 class="social-link"
-                href="https://www.researchgate.net/profile/Farhin-Rahman-3"
+                href="https://scholar.google.com/citations?user=MfRct4YAAAAJ&hl=en"
                 target="_blank"
-                ><i class="fa-brands fa-researchgate" aria-hidden="true"></i
+                rel="noopener noreferrer"
+                aria-label="Google Scholar"
+                ><i class="fa fa-graduation-cap" aria-hidden="true"></i
               ></a>
             </li>
           </ul>
         </div>
+
         <div class="col-lg-4 about-card">
-          <h3 class="font-weight-light">Area of Expertise</h3>
-          <span class="line mb-5"></span>
-          <div class="row">
-            <div class="col-1 text-danger pt-1">
-              <i class="ti-widget icon-lg"></i>
-            </div>
-            <div class="col-10 ml-auto mr-3">
-              <h6>Software Developer</h6>
-              <p class="subtitle">
-                HTML, CSS, JavaScript, React JS, Next JS, Bootstrap
-              </p>
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-1 text-danger pt-1">
-              <i class="ti-layers-alt"></i>
-            </div>
-            <div class="col-10 ml-auto mr-3">
-              <h6>Web Development</h6>
-              <p class="subtitle">
-                Mern Stack, Responsive Design, Version Control
-              </p>
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-1 text-danger pt-1">
-              <i class="ti-bar-chart"></i>
-            </div>
-            <div class="col-10 ml-auto mr-3">
-              <h6>Data science</h6>
-              <p class="subtitle">TensorFlow, PyTorch, Keras</p>
-              <hr />
-            </div>
-          </div>
-        </div>
+  <h3 class="font-weight-light">Areas of Expertise</h3>
+  <span class="line mb-5"></span>
+  
+  <!-- Agentic AI Systems -->
+  <div class="row">
+    <div class="col-1 text-danger pt-1">
+      <i class="ti-widget icon-lg"></i>
+    </div>
+    <div class="col-10 ml-auto mr-3">
+      <h6>Agentic AI Systems</h6>
+      <p class="subtitle">
+        LangGraph & LangChain for multi-step orchestration, RAG pipelines (vector + graph‑augmented), 
+        tool-calling, and multimodal agents (text+image+PDF).
+      </br>  
+        <strong>Stack:</strong> LangGraph, LangChain, LlamaIndex, Qdrant, Neo4j, FAISS, SQL AST validation.
+      </p>
+      <hr />
+    </div>
+  </div>
+
+  <!-- ML & MLOps -->
+  <div class="row">
+    <div class="col-1 text-danger pt-1"><i class="ti-bar-chart"></i></div>
+    <div class="col-10 ml-auto mr-3">
+      <h6>Machine Learning & MLOps</h6>
+      <p class="subtitle">
+        Deep learning for NLP/CV; deployment to production with robust pipelines.
+      </br>
+        <strong>Stack:</strong> PyTorch, HuggingFace Transformers, Scikit-learn, MLflow, Weights & Biases, 
+        Docker, CI/CD (GitHub Actions), data versioning (DVC).  
+        Databases: PostgreSQL, Vector DBs (Qdrant, Pinecone, Weaviate
+), Graph DB (Neo4j).
+      </p>
+      <hr />
+    </div>
+  </div>
+
+  <!-- Software / Cloud -->
+  <div class="row">
+    <div class="col-1 text-danger pt-1">
+      <i class="ti-layers-alt"></i>
+    </div>
+    <div class="col-10 ml-auto mr-3">
+      <h6>Software & Cloud Engineering</h6>
+      <p class="subtitle">
+        Full‑stack systems with scalable APIs, frontend frameworks, and cloud‑native infra.
+      </br>
+        <strong>Stack:</strong> Python (FastAPI, Flask), Node/Express, JavaScript/TypeScript, React, Next.js, 
+        SQLAlchemy, REST/GraphQL APIs.  
+        Cloud: AWS (EC2, S3, Lambda), Docker, Kubernetes.
+      </p>
+      <hr />
+    </div>
+  </div>
+</div>
       </div>
     </div>
 
-    <!--Resume Section-->
+    <!-- Resume -->
     <section class="section" id="resume">
       <div class="container">
         <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
         <div class="row">
+          <!-- Experience -->
           <div class="col-md-6 col-lg-4">
             <div class="card">
               <div class="card-header">
                 <div class="mt-2">
-                  <h4>Work Expereince</h4>
+                  <h4>Work Experience</h4>
                   <span class="line"></span>
                 </div>
               </div>
               <div class="card-body">
+                <h6 class="title text-danger">AI Engineer • Kodamai</h6>
+                <p>Aug 2025 – Present</p>
+                <p class="subtitle mb-2">
+                  <strong>Agentic System Design & Orchestration</strong>
+                </p>
+                <ul>
+                  <li>
+                    Prototyped a conversational agent MVP using LangGraph/LangChain
+                    with robust tool-calling and evaluation loops.
+                  </li>
+                  <li>
+                    Co-designed multimodal data architecture: Vector (Qdrant),
+                    Graph (Neo4j), and SQL for complex retrieval.
+                  </li>
+                  <li>
+                    Built ingestion pipelines leveraging embeddings and graph
+                    relationships for entity matching.
+                  </li>
+                  <li>
+                    Established CI/CD, containerization, tracing/profiling for
+                    scalable performance.
+                  </li>
+                </ul>
+                <hr />
+
+                <h6 class="title text-danger">AI Engineer • Ontik Technology</h6>
+                <p>May 2025 – Jul 2025</p>
+                <p class="subtitle mb-2">
+                  <strong>Social Media Intelligence (Banking)</strong>
+                </p>
+                <ul>
+                  <li>
+                    Automated sentiment analysis pipeline on public Facebook data
+                    via Apify ingestion.
+                  </li>
+                  <li>
+                    Fine-tuned multi-class sentiment model; added priority routing
+                    for critical items and dashboard reporting.
+                  </li>
+                </ul>
+                <hr />
+
+                <h6 class="title text-danger">Software Engineer (AI/ML) • micro1</h6>
+                <p>Mar 2024 – Apr 2025</p>
+                <ul>
+                  <li>
+                    Fine-tuned AI interviewer; integrated spaCy NER & SBERT
+                    scoring; cut processing time by 40%.
+                  </li>
+                  <li>
+                    Optimized pipelines via caching/batching (−50% data prep,
+                    +30% training efficiency).
+                  </li>
+                  <li>
+                    Set up MLflow MLOps lifecycle; reduced deployment time by 60%
+                    and production bugs by 45%.
+                  </li>
+                </ul>
+                <hr />
+
+                <h6 class="title text-danger">Junior Software Developer • BCIC Swiss GmbH</h6>
+                <p>May 2023 – Sep 2023</p>
+                <ul>
+                  <li>
+                    Developed full-stack web apps (React/JS) and REST APIs (PHP)
+                    in production.
+                  </li>
+                </ul>
+                <hr />
+
                 <h6 class="title text-danger">
-                  Junior Software Developer | BCIC Swiss GmBH
+                  Research Assistant (Part-time) • BRAC University
                 </h6>
-                <p>May, 2023 - Present</p>
-                <p class="subtitle">
-                  Primarily focusing on front-end development, utilizing
-                  React.js, HTML, CSS, jQuery, Bootstrap and Next.js frameworks, while also working on backend development technologies such as Mern stck, PHP and SQL. 
-                </p>
-                <hr />
-                <h6 class="title text-danger">Intern, DataWorks Ltd</h6>
-                <p>March. 2023 - April, 2023</p>
-                <p class="subtitle">
-                  Mainly worked on learning how to build application, website
-                  and software using Microsoft PowerApps. Also I learned data
-                  visualization using tools like Power BI and Tableau.
-                </p>
-                <hr />
-                <h6 class="title text-danger">Researcher, BRAC University</h6>
-                <p>October 2022 - January 2023</p>
-                <p class="subtitle">
-                  Worked as authors on multiple research appers focusing on NLP
-                  and image processing.
-                </p>
+                <p>Aug 2022 – Dec 2023</p>
+                <ul>
+                  <li>
+                    Contributed to NLP/CV research: datasets, experiments, and
+                    co-authored manuscripts.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+
+          <!-- Education -->
           <div class="col-md-6 col-lg-4">
             <div class="card">
               <div class="card-header">
@@ -292,33 +424,32 @@
               </div>
               <div class="card-body">
                 <h6 class="title text-danger">
-                  BRAC University | BSc in Computer Science
+                  BRAC University • B.Sc. in Computer Science
                 </h6>
-                <p>2018 - 2022</p>
+                <p>2018 – 2022</p>
                 <p class="subtitle">
-                  Majored in Computer Science. Skilld learned: Java, Python,
-                  SQL, Web Development, Networking, Artificial Intelligence
+                  Thesis: Predicting Brain Age from EEG Signals
+                  using ML & Neural Networks
                 </p>
+                <ul>
+                  <li>Honors: VC’s List (Top 2% — Summer 2020)</li>
+                  <li>Dean’s List (Top 5% — Spring 2019)</li>
+                </ul>
                 <hr />
                 <h6 class="title text-danger">
-                  Motijheel Ideal School & College | HSC
+                  Motijheel Ideal School &amp; College • HSC (Science)
                 </h6>
-                <p>Science Division</p>
-                <p class="subtitle">
-                  Obatined Golden GPA: 5 and was awarded scholarship in talent
-                  pool.
-                </p>
+                <p>Obtained Golden GPA 5.0; awarded scholarship in the talent pool.</p>
                 <hr />
                 <h6 class="title text-danger">
-                  Motijheel Model High School & College | SSC
+                  Motijheel Model High School &amp; College • SSC (Science)
                 </h6>
-                <p>Science Division</p>
-                <p class="subtitle">
-                  Obatined GPA: 5 with an average of 94% marks.
-                </p>
+                <p>Obtained GPA 5.0 with an average of 94% marks.</p>
               </div>
             </div>
           </div>
+
+          <!-- Skills & Languages -->
           <div class="col-lg-4">
             <div class="card">
               <div class="card-header">
@@ -328,46 +459,24 @@
                 </div>
               </div>
               <div class="card-body pb-2">
-                <h6>HTML5 &amp; CSS3</h6>
-                <div class="progress mb-3">
-                  <div
-                    class="progress-bar bg-danger"
-                    role="progressbar"
-                    style="width: 97%"
-                    aria-valuenow="25"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-                <h6>JavaScript</h6>
-                <div class="progress mb-3">
-                  <div
-                    class="progress-bar bg-danger"
-                    role="progressbar"
-                    style="width: 85%"
-                    aria-valuenow="25"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
                 <h6>Python</h6>
                 <div class="progress mb-3">
                   <div
                     class="progress-bar bg-danger"
                     role="progressbar"
-                    style="width: 80%"
-                    aria-valuenow="50"
+                    style="width: 95%"
+                    aria-valuenow="95"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
                 </div>
-                <h6>Java</h6>
+                <h6>JavaScript / TypeScript</h6>
                 <div class="progress mb-3">
                   <div
                     class="progress-bar bg-danger"
                     role="progressbar"
-                    style="width: 90%"
-                    aria-valuenow="75"
+                    style="width: 85%"
+                    aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -377,8 +486,41 @@
                   <div
                     class="progress-bar bg-danger"
                     role="progressbar"
+                    style="width: 88%"
+                    aria-valuenow="88"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <h6>Docker & Linux</h6>
+                <div class="progress mb-3">
+                  <div
+                    class="progress-bar bg-danger"
+                    role="progressbar"
+                    style="width: 80%"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <h6>PyTorch / Transformers</h6>
+                <div class="progress mb-3">
+                  <div
+                    class="progress-bar bg-danger"
+                    role="progressbar"
                     style="width: 90%"
-                    aria-valuenow="75"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <h6>MLflow & MLOps</h6>
+                <div class="progress mb-3">
+                  <div
+                    class="progress-bar bg-danger"
+                    role="progressbar"
+                    style="width: 80%"
+                    aria-valuenow="80"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -399,7 +541,7 @@
                     class="progress-bar bg-danger"
                     role="progressbar"
                     style="width: 100%"
-                    aria-valuenow="25"
+                    aria-valuenow="100"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -410,7 +552,7 @@
                     class="progress-bar bg-danger"
                     role="progressbar"
                     style="width: 100%"
-                    aria-valuenow="25"
+                    aria-valuenow="100"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -420,8 +562,8 @@
                   <div
                     class="progress-bar bg-danger"
                     role="progressbar"
-                    style="width: 30%"
-                    aria-valuenow="25"
+                    style="width: 20%"
+                    aria-valuenow="30"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -431,8 +573,8 @@
                   <div
                     class="progress-bar bg-danger"
                     role="progressbar"
-                    style="width: 40%"
-                    aria-valuenow="50"
+                    style="width: 20%"
+                    aria-valuenow="40"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -440,10 +582,12 @@
               </div>
             </div>
           </div>
+          <!-- /Skills & Languages -->
         </div>
       </div>
     </section>
 
+    <!-- Traits / Banner -->
     <section class="section bg-dark text-center">
       <div class="container">
         <div class="row text-center">
@@ -456,7 +600,6 @@
               </div>
               <div class="col-7 text-left py-3">
                 <h1 class="text-danger font-weight-bold font40">Hardworking</h1>
-                <p class="text-light mb-1"></p>
               </div>
             </div>
           </div>
@@ -469,7 +612,6 @@
               </div>
               <div class="col-7 text-left py-3">
                 <h1 class="text-danger font-weight-bold font40">Motivated</h1>
-                <p class="text-light mb-1"></p>
               </div>
             </div>
           </div>
@@ -481,10 +623,7 @@
                 <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
               </div>
               <div class="col-7 text-left py-3">
-                <h1 class="text-danger font-weight-bold font40">
-                  Enthusiastic
-                </h1>
-                <p class="text-light mb-1"></p>
+                <h1 class="text-danger font-weight-bold font40">Enthusiastic</h1>
               </div>
             </div>
           </div>
@@ -493,13 +632,10 @@
               <div
                 class="col-5 text-right text-light border-right py-3 icon-container"
               >
-                <div class="m-auto">
-                  <i class="ti-heart-broken icon-xl"></i>
-                </div>
+                <div class="m-auto"><i class="ti-heart icon-xl"></i></div>
               </div>
               <div class="col-7 text-left py-3">
-                <h1 class="text-danger font-weight-bold font40">Technosavvy</h1>
-                <p class="text-light mb-1"></p>
+                <h1 class="text-danger font-weight-bold font40">Tech-savvy</h1>
               </div>
             </div>
           </div>
@@ -507,594 +643,392 @@
       </div>
     </section>
 
-    <section class="section" id="service">
-      <div class="container">
-        <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Projects</h2>
-        <div class="row">
-          <div class="col-md-4 col-sm-6">
-            <div class="card mb-5">
-              <div class="card-header has-icon">
-                <i class="ti-vector text-danger" aria-hidden="true"></i>
-              </div>
-              <div class="card-body px-4 py-3">
-                <h5 class="mb-3 card-title text-dark">Community Website</h5>
-                <p class="subtitle">
-                  I worked on the front end of a community-based website called
-                  LinkToBD. I used HTML, CSS, Bootstrap, JavaScript, and jQuery.
-                  This website helps connect people who share similar interests.
-                  It has different sections for networking and socializing,
-                  business and entrepreneurship, games, and hobbies.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card mb-5">
-              <div class="card-header has-icon">
-                <i class="ti-write text-danger" aria-hidden="true"></i>
-              </div>
-              <div class="card-body px-4 py-3">
-                <h5 class="mb-3 card-title text-dark">
-                  Student Management System
-                </h5>
-                <p class="subtitle">
-                  I created a complete student management system using PHP,
-                  HTML, CSS, and JavaScript. This system effectively stores and
-                  retrieves student information. It also allows users to search
-                  for student information by student ID, name, or other
-                  criteria. This is a full stack website made for my final year
-                  university project.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card mb-5">
-              <div class="card-header has-icon">
-                <i class="ti-package text-danger" aria-hidden="true"></i>
-              </div>
-              <div class="card-body px-4 py-3">
-                <h5 class="mb-3 card-title text-dark">Buying House Website</h5>
-                <p class="subtitle">
-                  I was part of a team that built the front-end of the Dhaka
-                  Fashion's BD buying house website. We used HTML, CSS,
-                  Bootstrap, jQuery, and JavaScript. The website is live at
-                  https://dhakafashions.com/#. This was a project I did during
-                  my tenure at BCIC Swiss GmBH as part of the development team's
-                  project.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card mb-5">
-              <div class="card-header has-icon">
-                <i class="ti-comment text-danger" aria-hidden="true"></i>
-              </div>
-              <div class="card-body px-4 py-3">
-                <h5 class="mb-3 card-title text-dark">Online Book Shop</h5>
-                <p class="subtitle">
-                  I built an online book shop website for my university project
-                  using JavaScript, PHP, React JS, and Next JS. Customers can
-                  add books to their cart and pay through bKash, Nagad, or
-                  Rocket. They can also borrow books from the library. The
-                  website has a user-friendly interface that makes it easy for
-                  customers to find and purchase books.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card mb-5">
-              <div class="card-header has-icon">
-                <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
-              </div>
-              <div class="card-body px-4 py-3">
-                <h5 class="mb-3 card-title text-dark">
-                  Recycleable Shopping Bag's Website
-                </h5>
-                <p class="subtitle">
-                  While working at BCIC Swiss GmBH, I built the front-end of the
-                  Recycleable Shopping Bag Refili's website using HTML, CSS,
-                  Bootstrap, JavaScript, and jQuery. The website was designed to
-                  be user-friendly, with a clean look to represent the product's
-                  clean image. It is live at:http://refili.ch/
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card mb-5">
-              <div class="card-header has-icon">
-                <i class="ti-support text-danger" aria-hidden="true"></i>
-              </div>
-              <div class="card-body px-4 py-3">
-                <h5 class="mb-3 card-title text-dark">
-                  Dermatologist's website
-                </h5>
-                <p class="subtitle">
-                  I built the full-stack website as a solo project for Aesthetic
-                  Dermatologist Dr. Rimita Farid's clinic, SkinFix by Dr. Rimita
-                  Farid, using PHP, CSS, HTML, JavaScript, Bootstrap, and
-                  jQuery. Customers can visit the website to see everything the
-                  clinic has to offer,consultation times, and contact numbers.
-                  The website is live at skinfix.com.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section bg-dark py-5">
-      <div class="container text-center">
-        <h2 class="text-light mb-5 font-weight-normal">
-          I Am Open for Exciting New Opportunities
-        </h2>
-        <button class="btn bg-primary w-lg">Contact me</button>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
+    <!-- PORTFOLIO (Projects / Certificates / Publications) -->
     <section class="section bg-custom-gray" id="portfolio">
       <div class="container">
         <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
-        <div class="portfolio">
-          <div class="filters">
-            <a href="#" data-filter=".new" class="active"> Works </a>
-            <a href="#" data-filter=".advertising"> Research </a>
-            <a href="#" data-filter=".branding"> Projects </a>
-          </div>
-          <div class="portfolio-container">
-            <div class="col-md-6 col-lg-4 web new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/df.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/df.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">WEB</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 web new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/df2.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/df2.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">WEB</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 advertising new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/r1.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/r1.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">ADVERSTISING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 web">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/sf2.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/sf3.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">WEB</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4 advertising">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/r2.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/r2.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">ADVERSITING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 web new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/sf.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/sf.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">WEB</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 advertising new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/r3.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/r3.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">ADVERSITING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 advertising new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/r4.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/r4.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">ADVERTISING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 branding new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/sf3.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/sf3.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">BRANDING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 branding">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/rf.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/rf.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">BRANDING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 branding new">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/lb.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/lb.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">BRANDING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 branding">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/rf3.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/rf3.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">BRANDING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 branding">
-              <div class="portfolio-item">
-                <img
-                  src="assets/imgs/df3.jpg"
-                  class="img-fluid"
-                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"
-                />
-                <div class="content-holder">
-                  <a class="img-popup" href="assets/imgs/df3.jpg"></a>
-                  <div class="text-holder">
-                    <h6 class="title">BRANDING</h6>
-                    <p class="subtitle">
-                      Expedita corporis doloremque velit in totam!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Filters -->
+        <div class="portfolio-filters mb-4">
+          <a class="active" data-filter="*">All</a>
+          <a data-filter=".projects">Projects</a>
+          <a data-filter=".certificates">Certificates</a>
+          <a data-filter=".publications">Publications</a>
         </div>
+
+        <!-- Grid -->
+        <div class="row portfolio-container">
+          <!-- Projects -->
+          <div class="col-md-6 col-lg-4 portfolio-item projects">
+
+            <div class="card">
+              <div class="card-header has-icon">
+                <i class="ti-comment-alt text-danger" aria-hidden="true"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">Multilingual AI Support Agent</h5>
+                <p class="subtitle clamp-4">
+                 AI financial assistant with SQL AST validation, multi-RAG retrieval (qualitative/logical/numeric), and neuro-symbolic rules for ranked recommendations, enhancing decision-making and user interactions.
+                <div class="stack">
+                  <strong>Stack:</strong> Python, LangGraph, Streamlit, Ollama, SQLite,
+                  yfinance/Stooq, RAG
+                  <br />
+                  <a
+                    class="read-more"
+                    href="https://multilingual-support-agent.streamlit.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live app <i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 portfolio-item projects">
+            <div class="card">
+              <div class="card-header has-icon">
+                <i class="ti-world text-danger" aria-hidden="true"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">
+                  LinkToBD — Social &amp; Networking Platform
+                </h5>
+                <p class="subtitle clamp-4">
+                  Versatile social platform connecting people across networking,
+                  business, travel &amp; more. Built during my tenure at BCIC, it features dynamic content and user-driven interaction for seamless connections.
+                </p>
+                <div class="stack">
+                  <strong>Stack:</strong> React, PHP, JavaScript,
+                  REST API
+                  <br />
+                  <a
+                    class="read-more"
+                    href="https://www.linktobd.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visit Site <i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 portfolio-item projects">
+
+            <div class="card">
+              <div class="card-header has-icon">
+                <i class="ti-bag text-danger" aria-hidden="true"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">
+                  Refili — Recyclable Shopping Bags
+                </h5>
+                <p class="subtitle clamp-4">
+                  A fully responsive e-commerce platform for recyclable jute bags, built with a React.js frontend for interactivity and PHP, JavaScript backend for server-side operations.
+                </p>
+                <div class="stack">
+                  <strong>Stack:</strong> React.js, PHP, JavaScript, Bootstrap
+                  <br />
+                  <a
+                    class="read-more"
+                    href="https://www.refili.ch/home"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visit Site <i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 portfolio-item projects">
+
+            <div class="card">
+              <div class="card-header has-icon">
+                <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">H-Food</h5>
+                <p class="subtitle clamp-4">
+                  A sentiment analysis model for Bangladeshi food-delivery reviews, leveraging PyTorch, Transformers to handle class imbalance. Sklearn was used for preprocessing and feature engineering.
+                </p>
+                <div class="stack">
+                  <strong>Stack:</strong> Python, PyTorch, Transformers,
+                  Sklearn
+                  <br />
+                  <a
+                    class="read-more"
+                    href="https://github.com/Farhin-Rahman/restaurant-reviews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visit GitHub<i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 portfolio-item projects">
+
+            <div class="card">
+              <div class="card-header has-icon">
+                
+                <i class="fa fa-leaf text-danger" aria-hidden="true"></i>
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">Grape Leaf Diseases (XAI)</h5>
+                <p class="subtitle clamp-4">
+                  A CNN model detecting grape leaf diseases with a 99.7% F1-score. Keras powered the model, with LIME for explainability to highlight key features. It improves precision in early disease detection.
+                </p>
+                <div class="stack">
+                  <strong>Stack:</strong> Python, Keras/TensorFlow, LIME, OpenCV
+                  <br />
+                  <a
+                    class="read-more"
+                    href="https://github.com/Farhin-Rahman/Grape-leaf-disease-detection"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visit GitHub<i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-6 col-lg-4 portfolio-item projects">
+
+  <div class="card">
+    <div class="card-header has-icon">
+      <i class="fa fa-comments text-danger" aria-hidden="true"></i>
+    </div>
+    <div class="card-body">
+  <h5 class="card-title text-dark">Banking Sentiment Analysis</h5>
+  <p class="subtitle clamp-4">
+    Automated sentiment analysis pipeline for a major bank, using Apify to gather social media data and a multi-class sentiment model to classify public feedback (positive, negative, inquiry).
+  </p>
+  <div class="stack">
+    <strong>Stack:</strong> Python, OpenAI API, Streamlit, Apify
+    <br />
+    <a
+      class="read-more"
+      href="https://bankusersentiment.onrender.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Visit App <i class="ti-angle-double-right"></i>
+    </a>
+  </div>
+</div>
+  </div>
+</div>
+
+
+          <!-- Certificates (placeholders to replace) -->
+          <!-- Certificates - Each certificate has its own card -->
+
+<!-- Certificate 1: ICCTA 2023 -->
+<div class="col-md-6 col-lg-4 portfolio-item certificates">
+  <div class="card">
+    <!-- 
+      TO ADD IMAGE: Replace 'assets/imgs/certificates/iccta-2023.jpg' 
+      with your actual certificate image path 
+    -->
+    <a href="assets/imgs/certificates/iccta-2023.jpg" target="_blank" rel="noopener noreferrer">
+      <img class="card-img-top" src="assets/imgs/d.png" alt="ICCTA 2023 Certificate">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title text-dark">ICCTA 2023 Presenter</h5>
+      <p class="subtitle clamp-4">
+        Presented paper on "Early Autism Disorder Detection Through Visualizing Eye-Tracking Patterns Using CCT" at the International Conference on Computer Technology Applications in Vienna, Austria.
+      </p>
+      <div class="stack">
+        <strong>Event:</strong> ICCTA 2023, Vienna, Austria
+        <br />
+        <a
+          class="read-more"
+          href="https://dl.acm.org/doi/10.1145/3605423.3605429"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View Paper <i class="ti-angle-double-right"></i>
+        </a>
       </div>
-    </section>
-    <!-- End of portfolio section -->
+    </div>
+  </div>
+</div>
 
-    <section class="section" id="blog">
-      <div class="container">
-        <h2 class="mb-5">My <span class="text-danger">Publications</span></h2>
-        <div class="row">
-          <div class="blog-card">
-            <div class="img-holder">
-              <img
-                src="assets/imgs/rg1.jpg"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-              />
-            </div>
-            <div class="content-holder">
-              <h6 class="title">
-                Early Autism Disorder Detection Through Visualizing Eye-Tracking
-                Patterns Using Compact Convolutional Transformers
-              </h6>
+<!-- Certificate 2: IEEE Conference -->
+<div class="col-md-6 col-lg-4 portfolio-item certificates">
+  <div class="card">
+    <!-- 
+      TO ADD IMAGE: Replace 'assets/imgs/certificates/ieee-2022.jpg' 
+      with your actual certificate image path 
+    -->
+    <a href="assets/imgs/certificates/ieee-2022.jpg" target="_blank" rel="noopener noreferrer">
+      <img class="card-img-top" src="assets/imgs/c.png" alt="IEEE IICAIET 2022 Certificate">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title text-dark">IEEE IICAIET 2022 Presenter</h5>
+      <p class="subtitle clamp-4">
+        Presented paper titled "Bengali Speech Recognition: An Overview" at the 4th IEEE International Conference on Artificial Intelligence in Engineering and Technology, held virtually.
+      </p>
+      <div class="stack">
+        <strong>Event:</strong> IEEE IICAIET 2022, Virtual Conference
+        <br />
+        <a
+          class="read-more"
+          href="https://ieeexplore.ieee.org/document/9936819"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View Paper <i class="ti-angle-double-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
-              <p class="post-details">
-                <a href="#">May, 2023</a>
+<!-- Certificate 3: Full-Stack Development -->
+<div class="col-md-6 col-lg-4 portfolio-item certificates">
+  <div class="card">
+    <!-- 
+      TO ADD IMAGE: Replace 'assets/imgs/certificates/micro1-fullstack.jpg' 
+      with your actual certificate image path 
+    -->
+    <a href="assets/imgs/d.png" target="_blank" rel="noopener noreferrer">
+      <img class="card-img-top" src="assets/imgs/b.png" alt="Full Stack Development Certificate">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title text-dark">Full-Stack Certification</h5>
+      <p class="subtitle clamp-4">
+        Certified by micro1 for excellent knowledge of Full Stack Development, covering modern web technologies including React, Node.js, databases, and API development.
+      </p>
+      <div class="stack">
+        <strong>Issuer:</strong> micro1
+        <br />
+        <strong>Date:</strong> November 18, 2024
+      </div>
+    </div>
+  </div>
+</div>
 
-                <a href="#"><i class="ti-comment"></i>IEEE ICCTA 2023</a>
-              </p>
+<!-- Certificate 4: Data Science -->
+<div class="col-md-6 col-lg-4 portfolio-item certificates">
+  <div class="card">
+    <!-- 
+      TO ADD IMAGE: Replace 'assets/imgs/certificates/micro1-datascience.jpg' 
+      with your actual certificate image path 
+    -->
+    <a href="assets/imgs/a.png" target="_blank" rel="noopener noreferrer">
+      <img class="card-img-top" src="assets/imgs/a.png" alt="Data Science Certificate">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title text-dark">Data Science Certification</h5>
+      <p class="subtitle clamp-4">
+        Certified by micro1 for excellent knowledge of Data Science, including machine learning, statistical analysis, data visualization, and predictive modeling.
+      </p>
+      <div class="stack">
+        <strong>Issuer:</strong> micro1
+        <br />
+        <strong>Date:</strong> February 27, 2024
+      </div>
+    </div>
+  </div>
+</div>
 
-              <p></p>
-
-              <p>
-                <b
-                  >Autism spectrum disorder (ASD) encompasses a wide range of
-                  conditions, including impairments in social interaction,
-                  communication, and relationships, as well as unusual
-                  behavioral patterns. Multiple new computer-aided technologies
-                  have improved autism diagnosis. Fifty-nine youngsters in the
-                  school age range participated in the research, during
-                  whic...</b
-                >
-              </p>
-
-              <a
-                href="https://dl.acm.org/doi/10.1145/3605423.3605429"
-                class="read-more"
-                >Read more <i class="ti-angle-double-right"></i
-              ></a>
-            </div>
-          </div>
-          <!-- end of blog wrapper -->
-
-          <!-- blog-card -->
-          <div class="blog-card">
-            <div class="img-holder">
-              <img
-                src="assets/imgs/rg2.jpg"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-              />
-            </div>
-            <div class="content-holder">
-              <h6 class="title">
-                A Transfer Learning Approach For Efficient Classification of
-                Waste Materials
-              </h6>
-
-              <p class="post-details">
-                <a href="#">March, 2023</a>
-
-                <a href="#"><i class="ti-comment"></i> IEEE CCWC 2023</a>
-              </p>
-
-              <p>
-                <b
-                  >In this study we have used the Waste Classification Dataset
-                  to build a highly accurate model that classified rubbish into
-                  two distinct groups in an effort to address the problem of
-                  waste classification for various classes of discarded
-                  material. VGG16, MobileNetV2, and a baseline 6 layer CNN model
-                  are used in the experiments. The VGG16 mode...</b
-                >
-              </p>
-
-              <a
-                href="https://ieeexplore.ieee.org/abstract/document/10099127"
-                class="read-more"
-                >Read more <i class="ti-angle-double-right"></i
-              ></a>
-            </div>
-          </div>
-          <!-- end of blog wrapper -->
-          <!-- blog-card -->
-          <div class="blog-card">
-            <div class="img-holder">
-              <img
-                src="assets/imgs/rg3.jpg"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-              />
-            </div>
-            <div class="content-holder">
-              <h4 class="title">Bengali Speech Recognition: An Overview</h4>
-
-              <p class="post-details">
-                <a href="#">November, 2022</a>
-
-                <a href="#"><i class="ti-comment"></i> IICAIET 2022</a>
-              </p>
-
-              <p>
-                <b
-                  >This study outlines the notable efforts of creating of
-                  automatic speech recognition (ASR) system in Bengali. It
-                  describes data from the Bengali language's existing voice
-                  corpus and the major reports that have contributed to the
-                  recent research scenario. It provides an overview of dataset
-                  or corpus that has been created for bengali ASR, challenge
-                  fa...</b
-                >
-              </p>
-
-              <a
-                href="https://ieeexplore.ieee.org/abstract/document/9936819"
-                class="read-more"
-                >Read more <i class="ti-angle-double-right"></i
-              ></a>
+          <!-- Publications -->
+          <div class="col-md-6 col-lg-4 portfolio-item publications">
+            <div class="card">
+              <div class="card-header has-icon">
+                <i class="ti-book text-danger" aria-hidden="true"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">
+                  Early Autism Disorder Detection (CvT)
+                </h5>
+                <p class="subtitle clamp-4">
+                  Eye-tracking pattern visualization using Compact Conv.
+                  Transformers for ASD support.
+                </p>
+                <div class="stack">
+                  <a
+                    class="read-more"
+                    href="https://dl.acm.org/doi/10.1145/3605423.3605429"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Read paper <i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- end of blog wrapper -->
+
+          <div class="col-md-6 col-lg-4 portfolio-item publications">
+            <div class="card">
+              <div class="card-header has-icon">
+                <i class="ti-book text-danger" aria-hidden="true"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">
+                  Transfer Learning for Waste Classification
+                </h5>
+                <p class="subtitle clamp-4">
+                  VGG16, MobileNetV2, and a 6-layer CNN baseline on a waste
+                  dataset.
+                </p>
+                <div class="stack">
+                  <a
+                    class="read-more"
+                    href="https://ieeexplore.ieee.org/document/10099127"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Read paper <i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 portfolio-item publications">
+            <div class="card">
+              <div class="card-header has-icon">
+                <i class="ti-book text-danger" aria-hidden="true"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-dark">
+                  Bengali Speech Recognition: An Overview
+                </h5>
+                <p class="subtitle clamp-4">
+                  Survey of datasets, methods, and challenges for Bengali ASR.
+                </p>
+                <div class="stack">
+                  <a
+                    class="read-more"
+                    href="https://ieeexplore.ieee.org/document/9936819"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Read paper <i class="ti-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Grid -->
         </div>
       </div>
     </section>
 
+    <!-- Contact -->
     <div class="section contact" id="contact" style="background-color: #131e38">
       <div id="map" class="map"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <div class="contact-info-card">
-              <h4 class="contact-title">Get in touch</h4>
-              <div class="row mb-2">
-                <div class="col-1 pt-1 mr-1">
-                  <i class="ti-mobile icon-md"></i>
-                </div>
-                <div class="col-10">
-                  <h6 class="d-inline">
-                    Phone : <br />
-                    <span class="text-muted">+(880)1751071851</span>
-                  </h6>
-                </div>
-              </div>
-              <div class="row mb-2">
-                <div class="col-1 pt-1 mr-1">
-                  <i class="ti-map-alt icon-md"></i>
-                </div>
-                <div class="col-10">
-                  <h6 class="d-inline">
-                    Address :<br />
-                    <span class="text-muted"
-                      >South Banasree, Dhaka-1219, Bangladesh</span
-                    >
-                  </h6>
-                </div>
-              </div>
-              <div class="row mb-2">
-                <div class="col-1 pt-1 mr-1">
-                  <i class="ti-envelope icon-md"></i>
-                </div>
-                <div class="col-10">
-                  <h6 class="d-inline">
-                    Email :<br />
-                    <span class="text-muted">farhinrahman1998@gmail.com</span>
-                  </h6>
-                </div>
-              </div>
-              <ul class="social-icons pt-4">
-                <li class="social-item">
-                  <a
-                    class="social-link"
-                    href="https://www.facebook.com/profile.php?id=100015068590839"
-                    target="_blank"
-                    ><i class="ti-facebook" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li class="social-item">
-                  <a
-                    class="social-link"
-                    href="https://www.researchgate.net/profile/Farhin-Rahman-3"
-                    target="_blank"
-                    ><i class="fa-brands fa-researchgate" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li class="social-item">
-                  <a
-                    class="social-link"
-                    href="https://www.linkedin.com/in/farhin-rahman22011998/"
-                    target="_blank"
-                    ><i class="ti-linkedin" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li class="social-item">
-                  <a
-                    class="social-link"
-                    href="https://github.com/Farhin-Rahman"
-                    target="_blank"
-                    ><i class="ti-github" aria-hidden="true"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
+  
           </div>
+          <!-- Add a contact form later if you want -->
         </div>
       </div>
     </div>
+
     <footer class="footer py-3">
       <div class="container">
         <p class="small mb-0 text-light">
@@ -1102,40 +1036,47 @@
           <script>
             document.write(new Date().getFullYear());
           </script>
-          Created <i class=""></i> By
-          <a href="Farhin" Rahman target="_blank"
-            ><span class="text-danger" title="Portfolio-of-Farhin Rahman"
-              >Farhin Rahman</span
-            ></a
+          
+          <a href="#" class="text-danger" title="Portfolio of Farhin Rahman"
+            >Farhin Rahman</a
           >
         </p>
       </div>
     </footer>
 
-    <!-- core  -->
+    <!-- Core JS -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- Isotope  -->
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
     <script
       src="https://kit.fontawesome.com/e591ff9cb9.js"
       crossorigin="anonymous"
     ></script>
-    <!-- portfolio js -->
     <script src="assets/js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var printButton = document.getElementById('printButton');
 
+    <!-- Init Isotope filters for Portfolio -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var printButton = document.getElementById("printButton");
         if (printButton) {
-          printButton.addEventListener('click', function () {
-            window.print(); // Open the browser's print dialog
+          printButton.addEventListener("click", function () {
+            window.print();
           });
         }
+
+        // Portfolio filtering
+        var $grid = $(".portfolio-container").isotope({
+          itemSelector: ".portfolio-item",
+          layoutMode: "fitRows",
+        });
+
+        $(".portfolio-filters a").on("click", function (e) {
+          e.preventDefault();
+          $(".portfolio-filters a").removeClass("active");
+          $(this).addClass("active");
+          var filterValue = $(this).attr("data-filter");
+          $grid.isotope({ filter: filterValue });
+        });
       });
     </script>
   </body>
